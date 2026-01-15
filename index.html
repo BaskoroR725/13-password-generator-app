@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Password generator app</title>
+  </head>
+  <body>
+    <main>
+      <section class="generator">
+        <h1 class="generator__title">Password Generator</h1>
+
+        <div class="generator__display">
+          <span class="generator__password generator__password--placeholder"
+            >P4$5W0rD!</span
+          >
+          <div style="display: flex; align-items: center; gap: 1rem">
+            <span
+              id="copy-success"
+              style="color: var(--clr-primary); opacity: 0; transition: 0.3s"
+              >COPIED</span
+            >
+            <button
+              type="button"
+              class="generator__copy-btn"
+              aria-label="Copy password to clipboard"
+            >
+              <svg
+                class="generator__copy-icon"
+                width="21"
+                height="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20.341 3.091 17.909.659A2.25 2.25 0 0 0 16.319 0H8.25A2.25 2.25 0 0 0 6 2.25V4.5H2.25A2.25 2.25 0 0 0 0 6.75v15A2.25 2.25 0 0 0 2.25 24h10.5A2.25 2.25 0 0 0 15 21.75V19.5h3.75A2.25 2.25 0 0 0 21 17.25V4.682a2.25 2.25 0 0 0-.659-1.591ZM12.75 21.75a.75.75 0 0 1-.75.75H2.25a.75.75 0 0 1-.75-.75v-15a.75.75 0 0 1 .75-.75H6v10.5A2.25 2.25 0 0 0 8.25 18h4.5v3.75ZM19.5 17.25a.75.75 0 0 1-.75.75H8.25a.75.75 0 0 1-.75-.75v-15a.75.75 0 0 1 .75-.75h7.5v3a.75.75 0 0 0 .75.75h3v11.25Z"
+                  fill="#A4FFAF"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <form class="generator__card">
+          <div class="generator__setting">
+            <div class="generator__length-info">
+              <label for="length-slider" class="generator__label"
+                >Character Length</label
+              >
+              <span id="length-display" class="generator__length-number"
+                >10</span
+              >
+            </div>
+
+            <div class="generator__range-container">
+              <input
+                type="range"
+                id="length-slider"
+                class="generator__range"
+                min="0"
+                max="20"
+                value="10"
+                aria-labelledby="length-slider"
+              />
+            </div>
+          </div>
+
+          <div class="generator__options">
+            <div class="generator__option">
+              <input
+                type="checkbox"
+                id="uppercase"
+                class="generator__checkbox"
+              />
+              <label for="uppercase" class="generator__label"
+                >Include Uppercase Letters</label
+              >
+            </div>
+
+            <div class="generator__option">
+              <input
+                type="checkbox"
+                id="lowercase"
+                class="generator__checkbox"
+                checked
+              />
+              <label for="lowercase" class="generator__label"
+                >Include Lowercase Letters</label
+              >
+            </div>
+
+            <div class="generator__option">
+              <input type="checkbox" id="numbers" class="generator__checkbox" />
+              <label for="numbers" class="generator__label"
+                >Include Numbers</label
+              >
+            </div>
+
+            <div class="generator__option">
+              <input type="checkbox" id="symbols" class="generator__checkbox" />
+              <label for="symbols" class="generator__label"
+                >Include Symbols</label
+              >
+            </div>
+          </div>
+
+          <div class="generator__strength-container">
+            <span class="generator__strength-text">Strength</span>
+            <div class="generator__strength-meter">
+              <span class="generator__strength-label">Medium</span>
+              <div class="generator__bars">
+                <div class="generator__bar"></div>
+                <div class="generator__bar"></div>
+                <div class="generator__bar"></div>
+                <div class="generator__bar"></div>
+              </div>
+            </div>
+          </div>
+
+          <button class="generator__submit-btn">
+            Generate
+            <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg">
+              <path
+                fill="#24232C"
+                d="m5.106 12 5.66-5.66a.5.5 0 0 0 0-.707L5.106 0 4.399.707 9.442 5.75H0v1h9.442l-5.043 5.043.707.707Z"
+              />
+            </svg>
+          </button>
+        </form>
+      </section>
+    </main>
+    <footer class="attribution">Coded by Baskoro Ramadhan</footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>

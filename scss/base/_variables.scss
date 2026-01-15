@@ -1,0 +1,18 @@
+:root {
+  // Colors
+  --clr-dark: #18171f;
+  --clr-grey: #817d92;
+  --clr-almost-white: #e6e5ea;
+  --clr-primary: #a4ffaf; // Neon Green
+  --clr-grey-old: #24232c;
+  
+  // Status Colors
+  --clr-red: #f64a4a;
+  --clr-orange: #fb7c58;
+  --clr-yellow: #f8cd65;
+
+  // Typography (Menggunakan rem agar accessible)
+  --fs-heading-l: 2rem;    // 32px
+  --fs-heading-m: 1.5rem;  // 24px
+  --fs-body: 1.125rem;     // 18px
+}

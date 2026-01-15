@@ -1,0 +1,22 @@
+@use './variables';
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--clr-dark);
+  color: var(--clr-almost-white);
+  font-family: 'JetBrains Mono', monospace;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
