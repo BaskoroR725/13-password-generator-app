@@ -33,6 +33,12 @@ input, button, textarea, select {
   font: inherit;
 }
 
+.attribution {
+  display: grid;
+  place-content: center;
+  padding: 1rem;
+}
+
 .generator {
   width: 100%;
   max-width: 33.75rem;
